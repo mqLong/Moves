@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(to right, #8e2a9d, #31aae2);
+            width: 100%;
+            height: 128px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .search {
+            width: 100%;
+            height: 116px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search .seachInput {
+            width: 416px;
+            height: 65px;
+            border-radius: 20px;
+            border: solid 2px #e8e8e8;
+            align-items: center;
+            display: flex;
+        }
+
+        .search .seachInput img {
+            margin-left: 118px;
+        }
+
+        .search .seachInput input {
+            height: 65px;
+            border: none;
+            font-size: 24px;
+            margin-left: 23px;
+            width: 200px;
+            overflow: hidden;
+            color: #b4b4b4;
+        }
+
+        .banner {
+            width: 100%;
+            height: 569px;
+            position: relative;
+        }
+
+        .banner .pic {
+            background-image: url(img/banner1.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 437px;
+            position: relative;
+        }
+
+        .pic .jiage {
+            position: absolute;
+            left: 32px;
+            bottom: 24px;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .pic .jiage p {
+            font-size: 37px;
+            display: inline;
+        }
+
+        .pic img {
+            position: absolute;
+            right: 42px;
+            bottom: 35px
+        }
+
+        .banner1 .ban1Message {
+            width: 100%;
+            height: 132px;
+            background-color: #fff;
+            position: relative;
+        }
+
+        .banner .ban1Message p {
+            margin-left: 31px;
+            margin-top: 22px;
+        }
+
+        .banner .ban1Message img {
+            position: absolute;
+            top: 19px;
+            right: 10px;
+        }
+
+        .banner2 .B2pic {
+            background-image: url(img/banner2.png)
+        }
+        .banner2{
+            height: 437px;
+        }
+        .bottomBar {
+            z-index: 120;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background: #f5f5f5;
+            height: 93px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4e4e4e;
+            font-size: 16px;
+        }
+
+        a:visited {
+            color: #4e4e4e;
+        }
+
+        .bottomBar a {
+            display: inline-block;
+            width: 50px;
+            text-align: center;
+            position: relative;
+        }
+
+        .yuanquan{
+            position: fixed;
+            bottom: 18px;
+            left: 50%;
+            margin-left: -44px;
+            z-index: 10000;
+        }
+        input::-webkit-input-placeholder{
+            color:#b8b8b8;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="paixu">
+                <img src="icon/arrowD.png" alt="">
+                <img src="icon/az.png" alt="">
+            </div>
+            <div class="logo"><img src="icon/logo.png" alt=""></div>
+            <div class="erji"><img src="icon/erji.png" alt=""></div>
+        </div>
+
+        <div class="search">
+            <div class="seachInput">
+                <img src="icon/search.png" alt="">
+                <input type="text" placeholder="查找房源">
+            </div>
+        </div>
+
+        <div class="banner banner1">
+            <div class="B1pic pic">
+                <div class="jiage">
+                    <p>£1,625 pcm</p>
+                    <span>(价格可谈)</span><br>
+                    <span>三室一厅出租</span>
+                </div>
+                <img src="icon/emo.png" alt="">
+            </div>
+            <div class="ban1Message">
+                <p style="color:#333">Park View Mansions, Stratford E20</p>
+                <p>88.1公里距离, 15张照片.png</p>
+                <img src="icon/xiaofangzi.png" alt="">
+            </div>
+        </div>
+
+        <div class="banner banner2">
+            <div class="B2pic pic">
+                <div class="jiage">
+                    <p>£1,025 pcm</p>
+                    <span></span><br>
+                    <span>一房一室出租</span>
+                </div>
+                <img src="icon/Wemo.png" alt="">
+            </div>
+        </div>
+
+        <div class="bottomBar">
+            <a href="#">
+                <img src="icon/fangchan.png" alt="">
+                <span>房产</span>
+            </a>
+            <a href="#">
+                <img src="icon/zhibo.png" alt="">
+                <span>直播</span>
+            </a>
+            <a href="#" id="yuanquan">
+                <img src="icon/yuanquan2.png" alt="" style="z-index:10001">
+            </a>
+            <a href="#">
+                <img src="icon/pyq.png" alt="">
+                <span>朋友圈</span>
+            </a>
+            <a href="#">
+                <img src="icon/wode.png" alt="">
+                <span>我的</span>
+            </a>
+        </div>
+        <div class="yuanquan">
+            <img src="icon/yuanquan1.png" alt="">
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
